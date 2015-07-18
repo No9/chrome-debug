@@ -5,6 +5,7 @@
  * Expose `debug()` as the module.
  */
 
+var localmem = require('localstorage-memory');
 exports = module.exports = require('./debug');
 exports.log = log;
 exports.formatArgs = formatArgs;
@@ -163,6 +164,6 @@ exports.enable(load());
 
 function localstorage(){
   try {
-    return window.localStorage;
+    return localmem()
   } catch (e) {}
 }
