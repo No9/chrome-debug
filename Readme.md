@@ -11,14 +11,16 @@ $ npm install chrome-debug
 
 ## Usage 
 
-This library can be used directly with your browserify builds with targeting Chrome Packaged Apps. 
+This library can be used directly with your browserify builds targeting Chrome Packaged Apps. 
+
+If you want to override a thirdparty dependancy in your builds then you use
 
 ```
 $ browserify -r chrome-debug:debug index.js -o bundle.js
 ```
 
 ```
-var debug = require('../../browser');
+var debug = require('chrome-debug');
 debug.enable('*')
 var a = debug('worker:a');
 var b = debug('worker:b');
