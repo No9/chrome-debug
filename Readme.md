@@ -14,7 +14,7 @@ $ npm install chrome-debug
 This library can be used directly with your browserify builds with targeting Chrome Packaged Apps. 
 
 ```
-$ browserify -r chrome-fs:fs index.js -o bundle.js
+$ browserify -r chrome-debug:debug index.js -o bundle.js
 ```
 
 ```
